@@ -4067,7 +4067,6 @@ router
                 }
             });
     });
-
 router
     .post('/pay-now-for-foods', function (req, res, next) {
 
@@ -4352,62 +4351,9 @@ router
 
                                                 } else {
 
-                                                    // UPDATING FOOD STOCK QTY 
-
-                                                    for (var i = 0; i < items.length; i++) {
-
-                                                        db.cook_infos.find(
-                                                            {
-                                                                'food_details._id':mongojs.ObjectId(items[i].food_id)
-
-                                                            }
-                                                            , function (err, cook) {
-
-                                                                if (err) {
-
-                                                                    console.log(err);
-                                                                    res.send('cook not find');
-                                                                } else {
-
-                                                                    cook[0].
-                                                                    
-                                                                }
-
-
-                                                            });
-
-                                                        // db.user_infos.findAndModify(
-
-                                                        //     {
-                                                        //         query: {
-                                                        //             // _id: mongojs.ObjectId(items[0].user_id)
-                                                        //             'food_details._id':mongojs.ObjectId(items[i].food_id) // CHANGE THIS WITH INCOMING COUPON ID
-                                                        //             //   _id:mongojs.ObjectId(req.body.user_id)
-                                                        //         },
-                                                        //         update: {
-                                                        //             $set: {
-                                                        //                 'food_details.$.coupon_counter': get_coupon_counter
-                                                        //             }
-
-                                                        //         },
-                                                        //         new: true
-                                                        //     },
-                                                        //     function (err, data, lastErrorObject) {
-                                                        //         if (err) {
-                                                        //             res.status(400);
-                                                        //             res.send('error');
-                                                        //             throw err;
-
-                                                        //         } else {
-
-                                                        //             console.log('success');
-                                                        //             //   res.send('success');
-                                                        //         }
-                                                        //     });
-                                                    }
-
-                                                } //else close
-
+                                                    console.log('success');
+                                                    //   res.send('success');
+                                                }
 
                                             });
 
