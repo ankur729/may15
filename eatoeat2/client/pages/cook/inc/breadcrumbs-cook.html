@@ -1,0 +1,11 @@
+<div class="container" ng-controller="cook_register">
+	<ul class="breadcrumbs" ng-init="get_breadcrumb_name()" >
+		<li class="list"><a href="#0" class="link" style="font-size: 15px">{{cook_name_breadcrumb}}</a></li>
+		<li class="list" ng-init="check_activation_status()"> 
+	<span style="float: right;font-size: 15px;color:yellow" ng-if="vv=='Approved'">Approved</span> <span style="float: right;font-size: 15px;color:red" ng-if="vv=='Pending For Approval'">Un-Approved</span> <span style="float: right;font-size: 15px;color:red" ng-if="vv=='new'">Un-Approved</span>
+			
+			</li>
+		<!--<li class="list">{{loc_show}}</li>-->
+		
+	</ul>
+</div>
